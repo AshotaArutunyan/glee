@@ -3,7 +3,54 @@
 @import 'reset';
 @import 'global';
 
+.header{
+  padding: 45px 0;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 
+.menu{
+  &__list{
+    display: flex;
+  }
+  &__list-item + .menu__list-item{
+    padding-left: 35px;
+  }
+  &__list-link{
+    color: $button;
+  }
+}
+
+.user-nav{
+  display: flex;
+  &__inner{
+    display: flex;
+    min-width: 178px;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #fcd7b6;
+    border-radius: 4dvw;
+    margin: 0 20px;
+  }
+  &__link{
+    position: relative;
+  }
+  &__num{
+    background-color: #fff;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    position: absolute;
+    text-align: center;
+    line-height: 16px;
+    top: -8px;
+    right: -9px;
+  }
+
+}
 
 
 
