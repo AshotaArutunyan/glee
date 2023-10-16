@@ -3,30 +3,34 @@
 @import 'reset';
 @import 'global';
 
-.header{
+.header {
   padding: 45px 0;
-  &__inner{
+
+  &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 }
 
-.menu{
-  &__list{
+.menu {
+  &__list {
     display: flex;
   }
-  &__list-item + .menu__list-item{
+
+  &__list-item+.menu__list-item {
     padding-left: 35px;
   }
-  &__list-link{
+
+  &__list-link {
     color: $button;
   }
 }
 
-.user-nav{
+.user-nav {
   display: flex;
-  &__inner{
+
+  &__inner {
     display: flex;
     min-width: 178px;
     justify-content: space-evenly;
@@ -35,10 +39,12 @@
     border-radius: 4dvw;
     margin: 0 20px;
   }
-  &__link{
+
+  &__link {
     position: relative;
   }
-  &__num{
+
+  &__num {
     background-color: #fff;
     width: 16px;
     height: 16px;
@@ -51,6 +57,123 @@
   }
 
 }
+
+
+
+.footer-top {
+  display: flex;
+  padding: 75px 0;
+  border-bottom: 1px solid #dae4e9;
+  color: $footer;
+  @extend %Rubik-400;
+
+  &__item-adress {
+    width: 200px;
+    margin-right: 100px;
+  }
+
+  &__item-nav {
+    width: 170px;
+    margin-right: 100px;
+  }
+
+  &__item-form {
+    max-width: 270px;
+    width: 100%;
+  }
+
+  &__logo-img {
+    margin-bottom: 25px;
+  }
+
+  &__item-link {
+    font-size: 14px;
+    line-height: 32px;
+    display: block;
+    color: $footer;
+  }
+
+  &__item-link+.footer-top__item-link {
+    margin-top: 20px;
+  }
+
+  &__item-title {
+    margin-bottom: 25px;
+    font-size: 16px;
+    line-height: 21px;
+    padding-top: 15px;
+  }
+
+  &__list-item+.footer-top__list-item {
+    margin-top: 16px;
+  }
+
+  &__list-link {
+    font-size: 14px;
+    line-height: 32px;
+    color: $footer
+  }
+
+  &__item-text {
+    margin-bottom: 33px;
+  }
+
+  &__form-input {
+    width: 170px;
+    border: none;
+    padding: 5px 5px;
+    background-color: $bg;
+
+    &::placeholder {
+      font-size: 12px;
+      color: $item-title;
+      line-height: 20px;
+    }
+  }
+
+  &__form-btn {
+    background: $button;
+    color: #fff;
+    border: none;
+    padding: 5px 12px 4px;
+    @extend %DMSans-700;
+    font-size: 14px;
+
+  }
+}
+
+.footer-bottom {
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  color: $footer;
+  font-size: 14px;
+  @extend %Rubik-400;
+  align-items: center;
+
+ 
+  &__nav-link {
+    color: $footer;
+    background-color: transparent;
+    border: none;
+    padding: 0 15px;
+    line-height: 16px;
+  }
+
+  &__nav-link + .footer-bottom__nav-link{
+    border: none;
+    border-left: 2px solid $footer;
+    padding: 0 15px;
+  }
+}
+
+
+
+
+
+
+
+
 
 
 
