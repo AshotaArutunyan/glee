@@ -16,6 +16,7 @@
 .menu {
   &__list {
     display: flex;
+    
   }
 
   &__list-item+.menu__list-item {
@@ -23,7 +24,7 @@
   }
 
   &__list-link {
-    color: $button;
+    color: $nav;
   }
 }
 
@@ -102,6 +103,7 @@
     font-size: 16px;
     line-height: 21px;
     padding-top: 15px;
+    color: $nav;
   }
 
   &__list-item+.footer-top__list-item {
