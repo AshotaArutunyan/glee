@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
 .header {
@@ -16,7 +17,7 @@
 .menu {
   &__list {
     display: flex;
-    
+
   }
 
   &__list-item+.menu__list-item {
@@ -59,7 +60,12 @@
 
 }
 
+.container-small {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
 
+}
 
 .footer-top {
   display: flex;
@@ -153,7 +159,7 @@
   @extend %Rubik-400;
   align-items: center;
 
- 
+
   &__nav-link {
     color: $footer;
     background-color: transparent;
@@ -162,7 +168,7 @@
     line-height: 16px;
   }
 
-  &__nav-link + .footer-bottom__nav-link{
+  &__nav-link+.footer-bottom__nav-link {
     border: none;
     border-left: 2px solid $footer;
     padding: 0 15px;
@@ -171,8 +177,128 @@
 
 
 
+.top-slider {
+  &__inner {
+    background-image: url(../images/slidertop-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 820px;
 
+  }
 
+  &__item {
+    display: flex !important;
+    padding: 240px 0 0 300px;
+  }
+
+  &__content {
+    margin-right: 90px;
+    align-items: center;
+  }
+
+  &__title {
+    color: $item-title;
+    font-size: 72px;
+    line-height: 70px;
+    max-width: 470px;
+    @extend %Rubik-500;
+    margin-bottom: 35px;
+  }
+
+  &__text {
+    display: block;
+    color: $nav;
+    @extend %Rubik-500;
+    width: 375px;
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 40px;
+  }
+
+  &__button {
+    display: inline-block;
+    @extend %Rubik-500;
+    color: #fff;
+    font-size: 15px;
+    line-height: 12px;
+    padding: 25px 130px 25px 35px;
+    background-color: $button;
+    position: relative;
+
+    &:before {
+      content: url(../images/icons/arrows-button.png);
+      position: absolute;
+      right: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+
+    li {
+      padding: 0 5px;
+      line-height: 10px;
+
+      button {
+        color: $item-title;
+        padding: 0;
+        font-size: 10px;
+        background-color: rgba(255, 255, 255, .3);
+        height: 27px;
+        width: 27px;
+        border: 1px solid transparent;
+        border-radius: 50%;
+      }
+
+      &.slick-active {
+        button {
+          background-color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.slider-top-bottom {
+  display: flex;
+  justify-content: space-between;
+  background-color: $accent;
+  margin-bottom: 60px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 140px;
+  }
+
+  &__item+.slider-top-bottom__item {
+    border-left: 1px solid #e8e4df;
+  }
+
+  &__img {
+    margin-right: 26px;
+  }
+
+  &__title {
+    @extend %DMSans-700;
+    font-size: 18px;
+    line-height: 40px;
+    color: #414141;
+  }
+
+  &__text {
+    @extend %DMSans-500;
+    font-size: 16px;
+    line-height: 30px;
+    color: #585858;
+  }
+}
 
 
 
