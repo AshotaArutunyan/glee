@@ -1,18 +1,18 @@
 html,
-body{
+body {
   height: 100%;
 }
 
-body{
-color: $default;
-font-size: 16px;
-line-height: 30px;
-@extend %DMSans-700;
-display: flex;
-flex-direction: column;
+body {
+  color: $default;
+  font-size: 16px;
+  line-height: 30px;
+  @extend %DMSans-700;
+  display: flex;
+  flex-direction: column;
 }
 
-.main{
+.main {
   flex-grow: 1;
 }
 
@@ -22,6 +22,29 @@ flex-direction: column;
   padding: 0 15px;
 }
 
-.title{
+.title {
   @extend %DMSans-700;
+  font-size: 36px;
+  line-height: 1.2;
+  color: $section-title;
+  margin-bottom: 30px;
+}
+
+.filter-btn__wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 75px;
+}
+.filter-btn{
+  border: none;
+    background-color: transparent;
+    color: $list;
+    cursor: pointer;
+    &:hover {
+        color: $section-title;
+      }
+}
+
+.filter-btn+.filter-btn{
+  margin-left: 30px;
 }

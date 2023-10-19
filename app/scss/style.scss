@@ -71,7 +71,7 @@
   display: flex;
   padding: 75px 0;
   border-bottom: 1px solid #dae4e9;
-  color: $footer;
+  color: $list;
   @extend %Rubik-400;
 
   &__item-adress {
@@ -97,7 +97,7 @@
     font-size: 14px;
     line-height: 32px;
     display: block;
-    color: $footer;
+    color: $list;
   }
 
   &__item-link+.footer-top__item-link {
@@ -119,7 +119,7 @@
   &__list-link {
     font-size: 14px;
     line-height: 32px;
-    color: $footer
+    color: $list
   }
 
   &__item-text {
@@ -154,14 +154,14 @@
   height: 90px;
   display: flex;
   justify-content: space-between;
-  color: $footer;
+  color: $list;
   font-size: 14px;
   @extend %Rubik-400;
   align-items: center;
 
 
   &__nav-link {
-    color: $footer;
+    color: $list;
     background-color: transparent;
     border: none;
     padding: 0 15px;
@@ -170,7 +170,7 @@
 
   &__nav-link+.footer-bottom__nav-link {
     border: none;
-    border-left: 2px solid $footer;
+    border-left: 2px solid $list;
     padding: 0 15px;
   }
 }
@@ -299,6 +299,166 @@
     color: #585858;
   }
 }
+
+.products-top {
+  text-align: center;
+
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px 40px;
+    margin-bottom: 165px;
+  }
+
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    width: 270px;
+    width: 100%;
+    height: 380px;
+    background-color: #fff;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    border-radius: 10px;
+    align-items: center;
+    padding: 0 5px;
+    justify-content: space-around;
+
+  }
+
+  &__descr-title {
+    @extend %DMSans-500;
+    color: $item-title;
+    font-size: 16px;
+    line-height: 40px;
+  }
+
+  &__descr-price {
+    @extend %DMSans-700;
+    color: $button;
+    font-size: 16px;
+    line-height: 40px;
+  }
+
+}
+
+.products-bottom {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+
+  &__item {
+    display: flex;
+    background-color: $bg;
+    position: relative;
+    width: 870px;
+    height: 390px;
+
+  }
+
+  &__item+.products-bottom__item {
+    margin-left: 30px;
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 85px;
+    left: 140px;
+  }
+
+  &__wrapper {
+    padding-left: 385px;
+    margin-top: 85px;
+  }
+
+  &__title {
+    @extend %DMSans-700;
+    font-size: 26px;
+    line-height: 32px;
+    color: $item-title;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    @extend %Rubik-400;
+    font-size: 16px;
+    line-height: 30px;
+    color: $item-title;
+    width: 340px;
+    margin-bottom: 30px;
+  }
+
+  &__btn {
+    display: inline-block;
+    @extend %Rubik-500;
+    border: solid 1px #b3b7b5;
+    color: $nav;
+    font-size: 15px;
+    line-height: 12px;
+    padding: 25px 130px 25px 35px;
+    background-color: transparent;
+    position: relative;
+
+    &:before {
+      content: url(../images/icons/arrows-btn-accent.png);
+      position: absolute;
+      right: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.design-inner{
+  text-align: center;
+
+  &__items{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px 30px;
+  }
+  &__item{
+    position: relative;
+    width: 370px;
+    height: 246px;
+    text-align: left;
+    @extend %DMSans-700;
+  }
+  &__item-title{
+    position: absolute;
+    font-size: 20px;
+    color: $section-title;
+    z-index: 5;
+    width: 200px;
+    top: 40px;
+    left: 35px;
+    
+  }
+  &__text{
+    position: absolute;
+    z-index: 5;
+    font-size: 16px;
+    color: $button;
+    left: 35px;
+    top: 100px;
+  }
+  &__img{
+    position: absolute;
+  }
+}
+  
+
+
+
+
+
+
+
+
+
+
+
 
 
 
