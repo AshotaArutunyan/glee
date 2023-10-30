@@ -1,12 +1,12 @@
 $button: #a3bbc8;
-$accent: #fef7f0;
+$accent:  #436372;
 $section-title: #1a1a1a;
 $item-title: #243f4d;
 $default: #262626;
 $list: #868686;
 $bg: #fef7f0;
-$nav: #436372;
-
+$alt: #fef7f0;
+// accent=alt, nav=alt
 %DMSans-700 {
   font-family: 'DMSans-Bold', sans-serif;
   font-weight: 700;
@@ -33,7 +33,10 @@ $nav: #436372;
   border: none;
   padding: 5px 12px 4px;
   @extend %DMSans-700;
-  font-size: 14px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
 }
 

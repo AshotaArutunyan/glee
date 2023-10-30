@@ -25,7 +25,7 @@
   }
 
   &__list-link {
-    color: $nav;
+    color: $accent;
   }
 }
 
@@ -84,6 +84,10 @@
     margin-right: 100px;
   }
 
+  &__form {
+    display: flex;
+  }
+
   &__item-form {
     max-width: 270px;
     width: 100%;
@@ -109,7 +113,7 @@
     font-size: 16px;
     line-height: 21px;
     padding-top: 15px;
-    color: $nav;
+    color: $accent;
   }
 
   &__list-item+.footer-top__list-item {
@@ -140,7 +144,8 @@
   }
 
   &__form-btn {
-   @extend %btn;
+    @extend %btn;
+
 
   }
 }
@@ -203,7 +208,7 @@
 
   &__text {
     display: block;
-    color: $nav;
+    color: $accent;
     @extend %Rubik-500;
     width: 375px;
     font-size: 18px;
@@ -213,17 +218,11 @@
 
   &__button {
     @extend %btn;
-    padding: 25px 130px 25px 35px;
-    background-color: $button;
-    position: relative;
+    padding: 15px 19px 15px 28px;
+    max-width: 200px;
 
-    &:before {
-      content: url(../images/icons/arrows-button.png);
-      position: absolute;
-      right: 18px;
-      top: 50%;
-      transform: translateY(-50%);
-    }
+
+
   }
 
   .slick-dots {
@@ -258,7 +257,7 @@
 .slider-top-bottom {
   display: flex;
   justify-content: space-between;
-  background-color: $accent;
+  background-color: $alt;
   margin-bottom: 60px;
 
   &__item {
@@ -302,21 +301,78 @@
     margin-bottom: 165px;
   }
 
+  &__img {
+    object-fit: contain;
+  }
+}
 
-  &__item {
-    display: flex;
-    flex-direction: column;
-    width: 270px;
+
+.products-item {
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  width: 100%;
+  height: 380px;
+  background-color: #fff;
+  box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+  border-radius: 10px;
+  align-items: center;
+  padding: 0 5px;
+  justify-content: space-around;
+
+  &__img-box {
+    position: relative;
+    max-width: 300px;
+    max-height: 240px;
     width: 100%;
-    height: 380px;
-    background-color: #fff;
-    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
-    border-radius: 10px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    padding: 0 5px;
-    justify-content: space-around;
+    overflow: hidden;
+  }
+
+  &__link-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 0 9px;
+    position: absolute;
+    bottom: 30px;
+    left: 35px;
+    right: 35px;
+    transform: translateY(300%);
+    transition: all .3s;
+  }
+
+  &:hover {
+    .products-item__link-box {
+      transform: translateY(0)
+    }
 
   }
+
+
+  &__link {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .2s;
+  }
+
+  &__link:hover {
+    background-color: $button;
+
+    path {
+      fill: #fff;
+    }
+  }
+
+
 
   &__descr-title {
     @extend %DMSans-500;
@@ -332,6 +388,7 @@
     line-height: 40px;
   }
 
+
 }
 
 .products-bottom {
@@ -345,6 +402,7 @@
     position: relative;
     width: 870px;
     height: 390px;
+    align-items: center;
 
   }
 
@@ -360,7 +418,6 @@
 
   &__wrapper {
     padding-left: 385px;
-    margin-top: 85px;
   }
 
   &__title {
@@ -381,22 +438,18 @@
   }
 
   &__btn {
-    display: inline-block;
+    @extend %btn;
     @extend %Rubik-500;
     border: solid 1px #b3b7b5;
-    color: $nav;
-    font-size: 15px;
-    line-height: 12px;
-    padding: 25px 130px 25px 35px;
+    color: $accent;
     background-color: transparent;
-    position: relative;
+    max-width: 180px;
+    width: 100%;
+    border-radius: 5px;
+    padding: 15px 12px 15px;
 
-    &:before {
-      content: url(../images/icons/arrows-btn-accent.png);
-      position: absolute;
-      right: 18px;
-      top: 50%;
-      transform: translateY(-50%);
+    path {
+      fill: $accent;
     }
   }
 }
@@ -490,7 +543,8 @@
     display: flex;
     justify-content: space-between
   }
-  &__item{
+
+  &__item {
     max-width: 370px;
     width: 100%;
     height: 250px;
@@ -499,10 +553,10 @@
     background-repeat: no-repeat;
     position: relative;
   }
-  
-  &__btn{
+
+  &__btn {
     position: absolute;
-    top: 220px;
+    top: 235px;
     left: 30px;
     @extend %btn;
     padding: 6px 32px;
@@ -511,39 +565,46 @@
     line-height: 20px;
     z-index: 1;
   }
-    &__descr {
-      position: absolute;
-      top: 250px;
-      max-width: 370px;
-      width: 100%;
-      background-color: #fff;
-      padding: 0 30px 25px;
-      
-    }
-  &__text{
+
+  &__descr {
+    position: absolute;
+    top: 250px;
+    max-width: 370px;
+    width: 100%;
+    background-color: #fff;
+    padding: 0 30px 25px;
+
+  }
+
+  &__text {
     font-size: 18px;
     max-width: 290px;
     width: 290px;
     padding: 32px 0 15px;
     border-bottom: 1px solid #e0e0e0;
   }
-  &__autor{
+
+  &__autor {
     @extend %Rubik-400;
     font-size: 12px;
     line-height: 30px;
     padding-top: 20px;
-    
-    
-    span{
+
+
+    span {
       margin-left: 30px;
     }
   }
-  
+
 }
+
 .insights-bottom {
-  &__inner{
+  background-color: $bg;
+
+  &__inner {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     padding-top: 300px;
     padding-bottom: 85px;
   }
