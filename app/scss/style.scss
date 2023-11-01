@@ -598,7 +598,7 @@
 
 }
 
-.insights-bottom {
+.partners-bottom {
   background-color: $bg;
 
   &__inner {
@@ -609,6 +609,88 @@
     padding-bottom: 85px;
   }
 }
+
+.modal {
+  max-width: 470px;
+  width: 100%;
+  margin: 0 auto;
+  color: $accent;
+  padding: 120px 0;
+  @extend %Rubik-400;
+  &__label {
+    margin-bottom: 25px;
+    display: block;
+    
+  }
+  
+
+  &__input {
+    display: block;
+    width: 100%;
+    border: 2px solid #f6f6f6;
+    height: 60px;
+    margin-top: 10px;
+    padding: 0 15px;
+    
+  }
+
+  &__btn,
+  &__link {
+    display: block;
+    background-color: $button;
+    font-size: 18px;
+    color: #fff;
+    padding: 14px 0;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+  }
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    border-bottom: 1px solid #f6f6f6;
+  }
+  &__bottom{
+    text-align: center;
+    padding-top: 30px;
+  }
+  &__text{
+    margin-bottom: 20px;
+  }
+  &__link{
+    color: $item-title;
+    background-color: #fff;
+    border: 2px solid $button;
+  }
+
+}
+
+.terms{
+  padding: 115px 0 60px;
+  @extend %Rubik-400;
+  color: $item-title;
+  line-height: 30px;
+  &__title{
+    @extend%Rubik-500;
+    font-size: 24px;
+    line-height: 40px;
+    margin-bottom: 30px;
+  }
+  &__list{
+    padding-left: 15px;
+  }
+  &__list,
+  &__text{
+    margin-bottom: 50px;
+  }
+  
+  &__item+.terms__item{
+    margin-top: 15px;
+  }
+}
+
 
 
 

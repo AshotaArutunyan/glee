@@ -62,20 +62,65 @@
   <main class="main">
     <section class="top">
       <div class="container">
-        
+        <div class="breadcrumbs">
+          <h2 class="breadcrumbs__title">Log in</h2>
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a href="#" class="breadcrumbs__link">Home</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a href="#" class="breadcrumbs__link">Log in</a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="breadcrumbs">
-        <h2 class="breadcrumbs__title">Log in</h2>
-        <ul class="breadcrumbs__list">
-          <li class="breadcrumbs__item">
-            <a href="#" class="breadcrumbs__link">Home</a>
-          </li>
-          <li class="breadcrumbs__item">
-            <a href="#" class="breadcrumbs__link">Log in</a>
-          </li>
-        </ul>
+      
+    </section>
+    <section class="modal">
+      <div class="container">
+        <div class="modal__top">
+          <form class="modal__form" action="#">
+            <label class="modal__label">
+              Username or email address*
+              <input class="modal__input" type="text" required>
+            </label>
+            <label class="modal__label">
+              Password*
+              <input class="modal__input" type="password" required>
+            </label>
+
+            <button class="modal__btn" type="submit">Login</button>
+            <div class="modal__inner">
+              <label class="modal__label-error">
+                <input type="checkbox">
+                Remeber me
+              </label>
+              <a class="modal__error" href="#">
+                Lost your password?
+              </a>
+            </div>
+
+          </form>
+        </div>
+        <div class="modal__bottom">
+          <p class="modal__text">Not registered? No problem</p>
+          <a href="" class="modal__link">
+            Create an account
+          </a>
+        </div>
       </div>
     </section>
+    <div class="partners-bottom">
+      <div class="container-small">
+        <div class="partners-bottom__inner partners-bottom__inner--small">
+          <img class="partners-bottom__img" src="images/icons/partner-logo1.png" alt="">
+          <img class="partners-bottom__img" src="images/icons/partner-logo2.png" alt="">
+          <img class="partners-bottom__img" src="images/icons/partner-logo3.png" alt="">
+          <img class="partners-bottom__img" src="images/icons/partner-logo4.png" alt="">
+          <img class="partners-bottom__img" src="images/icons/partner-logo5.png" alt="">
+        </div>
+      </div>
+    </div>
   </main>
 
   <footer class="footetr">
